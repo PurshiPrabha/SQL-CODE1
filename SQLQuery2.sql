@@ -1,0 +1,28 @@
+use test_table
+
+
+create table employees
+(emp_ID int PRIMARY KEY,
+emp_name char(100),
+hire_date date,
+salary money,
+city varchar(255)
+)
+
+-------------------------------
+
+
+CREATE TABLE DEPARTMENT
+(
+DEPT_ID INT PRIMARY KEY,
+DEPT_NAME VARCHAR(100),
+DEPT_LOCATION CHAR(50),
+EMP_ID INT FOREIGN KEY REFERENCES EMPLOYEES (EMP_ID)
+);
+
+
+SELECT * FROM employees
+
+INSERT INTO employees VALUES (101, 'PRABHA', '2023-06-23', 45000, 'BANGALORE')
+INSERT INTO employees VALUES (102, 'MUDDU', '2022-08-05', 35000, ' ')
+
